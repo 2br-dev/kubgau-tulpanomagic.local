@@ -1,0 +1,44 @@
+[
+	{
+		"prefix": "более",
+		"number": "1 200",
+		"title": "растений под открытым небом",
+		"className": "normal"
+	},
+	{
+		"prefix": "",
+		"number": "20 000",
+		"title": "деревьев всех форм и размеров",
+		"className": "normal"
+	},
+	{
+		"prefix": "более",
+		"number": "800",
+		"title": "тропических растений в оранжереях",
+		"className": "normal"
+	},
+	{
+		"prefix": "",
+		"number": "30 000",
+		"title": "образцов научного гербария",
+		"className": "normal"
+	},
+	{
+		"prefix": "более",
+		"number": "70",
+		"title": "видов из Красных книг всех уровней",
+		"className": "normal"
+	},
+	{
+		"prefix": "на",
+		"number": "3-4°С",
+		"title": "прохладнее летом",
+		"className": "normal"
+	},
+	{
+		"prefix": "",
+		"number": "",
+		"title": "А также павлины и колония белок!",
+		"className": "squirrel"
+	}
+]

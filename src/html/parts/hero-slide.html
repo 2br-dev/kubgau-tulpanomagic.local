@@ -1,0 +1,16 @@
+<div class="swiper-slide" style="background-image: url(@@background)">
+	<div class="container">		
+		<div class="date">@@date</div>
+		<hgroup>
+			<h1>@@header</h1>
+			<p>@@subheader</p>
+		</hgroup>
+		@@if(partners.length != 0){
+			<div class="partners">
+				@@for(i=0;i<partners.length;i++){
+					@@include('./partner-link.html', { "partner": `+JSON.stringify(partners[i])+` })
+				}
+			</div>
+		}
+	</div>
+</div>

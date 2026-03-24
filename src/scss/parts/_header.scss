@@ -1,0 +1,153 @@
+@use "./vars" as v;
+
+header {
+	display: flex;
+	padding: 2rem 5%;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	background-color: #ffffffcc;
+	backdrop-filter: blur(5px);
+
+	@media (max-width: 650px) {
+		padding: 1rem 5%;
+	}
+
+	& .logo-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		flex-shrink: 0;
+
+		& img {
+			width: 304px;
+			height: 35px;
+			flex-shrink: 0;
+
+			@media (max-width: 450px) {
+				width: 135px;
+				height: 35px;
+				object-fit: cover;
+				object-position: left center;
+			}
+		}
+
+		& .bttn-outline {
+			@media (max-width: 700px) {
+				display: none;
+			}
+		}
+	}
+
+	& nav {
+		display: flex;
+		align-items: center;
+
+		& ul.desktop {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+
+			& li {
+				list-style: none;
+				display: block;
+
+				& a {
+					color: v.$text;
+					display: inline-block;
+					line-height: 2em;
+					padding: 0 0.75em;
+					border-radius: 12px;
+					transition: background-color 0.2s;
+
+					&:hover {
+						background-color: rgba(black, 0.05);
+					}
+				}
+			}
+
+			@media (max-width: 1310px) {
+				display: none;
+			}
+
+			& .address {
+				gap: 0.2em;
+				color: v.$secondary;
+
+				& p {
+					display: flex;
+					align-items: center;
+					margin: 0;
+				}
+
+				& i {
+					font-size: 32px;
+				}
+
+				& span {
+					display: flex;
+					flex-direction: column;
+					font-size: 13px;
+					line-height: 1.2em;
+				}
+			}
+		}
+
+		& ul.mobile {
+			margin: 0;
+			display: 0;
+			display: flex;
+			gap: 0.5em;
+			font-size: 1.5em;
+
+			& li {
+				list-style: none;
+
+				& a {
+					color: v.$text;
+				}
+			}
+
+			@media (min-width: 1310px) {
+				display: none;
+			}
+		}
+	}
+}
+
+.sidenav {
+	display: flex;
+	flex-direction: column;
+
+	& li.address {
+		order: -1;
+		border-bottom: 1px solid v.$fogged;
+
+		& p {
+			margin: 0;
+			line-height: 1.4em;
+			padding: 0.5em 1.5em;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			color: v.$secondary;
+
+			& i {
+				font-size: 2rem;
+			}
+
+			& small {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+#main-site {
+	@media (min-width: 700px) {
+		display: none;
+	}
+}

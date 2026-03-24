@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('./parts/head.html', {'title': 'КУБГАУ - Тюльпаномагия'})
+	</head>
+	<body>
+		<div id="top"></div>
+		@@include('./parts/header.html')
+		<!-- Герой -->
+		@@include('./parts/!hero.html')
+
+		<!-- Ботанический сад сегодня -->
+		@@include('./parts/!today.html')
+
+		<!-- Слайдер с картой -->
+		@@include('./parts/!map.html')
+
+		<!-- Партнёрство -->
+		@@include('./parts/!partnership.html')
+
+		<!-- История сада -->
+		@@include('./parts/!history.html')
+
+		<!-- Подвал -->
+		@@include('./parts/footer.html')
+
+		<script src="./kubgau-tulpanomagic/js/master.js"></script>
+	</body>
+</html>

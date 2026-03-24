@@ -1,0 +1,11 @@
+<section id="history">
+	<a href="" class="bx bx-chevron-left" id="history-prev"></a>
+	<a href="" class="bx bx-chevron-right" id="history-next"></a>
+	<div class="swiper" id="history-swiper">
+		<div class="parallax-bg" style="background-image: url('/kubgau-tulpanomagic/img/history-background.webp')" data-swiper-parallax="-40%"></div>
+		<div class="swiper-wrapper">
+			@@loop('../parts/history-slide.html', './data/history.json')
+		</div>
+	</div>
+	<div class="swiper-pagination" id="history-pagination"></div>
+</section>

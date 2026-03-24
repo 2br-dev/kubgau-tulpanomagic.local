@@ -1,0 +1,15 @@
+[
+	{
+		"date": "3-5 апреля",
+		"background": "./kubgau-tulpanomagic/img/tulpanomagic.webp",
+		"header": "Тюльпаномагия в ботаническом саду",
+		"subheader": "Встрчеайте весну в самом правильном месте!",
+		"partners": [
+			{
+				"title": "Тюльпаномагия",
+				"img": "./kubgau-tulpanomagic/img/partners/tulpanomagic.svg",
+				"link": ""
+			}
+		]
+	}
+]

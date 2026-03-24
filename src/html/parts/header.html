@@ -1,0 +1,39 @@
+<header>
+	<div class="logo-wrapper">
+		<a
+			href=""
+			class="logo"
+		>
+			<img
+				src="./kubgau-tulpanomagic/img/logo.svg"
+				alt="КУБГАУ"
+			/>
+		</a>
+		<a
+			href="https://kubsau.ru"
+			target="_blank"
+			class="bttn-outline"
+			>На основной сайт</a
+		>
+	</div>
+	<nav>
+		<ul class="desktop">
+			@@include('./navigation.html')
+		</ul>
+		<ul class="mobile">
+			<li>
+				<a
+					href="javascript:void(0)"
+					data-target="mobile-menu"
+					class="bx bx-menu sidenav-trigger"
+				></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<ul
+	class="sidenav"
+	id="mobile-menu"
+>
+	@@include('./navigation.html')
+</ul>

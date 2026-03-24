@@ -1,0 +1,16 @@
+<div class="swiper-slide">
+	<div class="dot"></div>
+	<div class="section">@@section</div>
+	<div class="content">
+		<h3>
+			@@if (context.section==""){@@title}
+			@@if (context.section!=""){@@section}
+		</h3>
+		<div class="data">
+			@@html
+		</div>
+	</div>
+	<div class="year">
+		@@year
+	</div>
+</div>

@@ -1,0 +1,76 @@
+@use "./vars" as v;
+
+footer {
+	background-color: v.$secondary;
+	color: #fff;
+	padding: 3vmax 0;
+
+	& a {
+		color: v.$primary;
+	}
+
+	& h3 {
+		font-size: clamp(24px, 2vw, 32px);
+	}
+
+	& .kv-wrapper {
+		display: table;
+
+		& .kv-pair {
+			display: table-row;
+
+			& .key,
+			& .value {
+				display: table-cell;
+			}
+
+			& .key {
+				padding-right: 1rem;
+			}
+
+			& .value {
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.copyright {
+	background-color: v.$secondary;
+	color: #fff;
+	padding-bottom: 3rem;
+
+	& a {
+		color: v.$primary;
+		font-weight: bold;
+	}
+
+	& .container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		& .networks {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			gap: 0.5em;
+			justify-content: center;
+
+			& li {
+				list-style: none;
+			}
+
+			@media (max-width: 650px) {
+				order: 1;
+				width: 100%;
+				margin-top: 2rem;
+			}
+		}
+
+		@media (max-width: 450px) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+}
