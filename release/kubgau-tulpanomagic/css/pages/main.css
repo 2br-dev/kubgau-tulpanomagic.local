@@ -39,7 +39,7 @@ section#hero #hero-swiper .swiper-wrapper .swiper-slide .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: calc(clamp(25px, 2.5rem, 46px) * 4 + 8vmax);
+    padding-top: calc(clamp(25px, 2.5vmax, 46px) * 4 + 5vmax);
     padding-bottom: 6vmax;
 }
 
@@ -49,7 +49,7 @@ section#hero #hero-swiper .swiper-wrapper .swiper-slide .container .date {
     color: #9DD800;
     background-color: #fff;
     font-weight: 700;
-    font-size: clamp(25px, 2.5rem, 46px);
+    font-size: clamp(25px, 2.5vmax, 46px);
     padding: 1.5em 1.5em 1rem 1rem;
     z-index: 1;
 }
@@ -218,6 +218,18 @@ section#map {
         overflow: auto;
         transition: opacity 0.4s, transform 0.4s;
         padding-right: 1rem;
+    }
+
+    section#map .map-wrapper .content-wrapper .data-wrapper::-webkit-scrollbar {
+        background: rgba(0, 0, 0, 0.2);
+        width: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    section#map .map-wrapper .content-wrapper .data-wrapper::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 8px;
     }
 
     section#map .map-wrapper .content-wrapper .data-wrapper [data-slide] {
@@ -860,6 +872,7 @@ section#history .parallax-bg {
         font-weight: 700;
         transition: left 0.5s;
         left: 0;
+        top: 80%;
         white-space: nowrap;
     }
 

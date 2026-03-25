@@ -100,6 +100,7 @@ function switchDesktopSlide(e: JQuery.ClickEvent) {
 	$('.icons g').removeClass('active');
 	$('.icons g[data-num="' + slideNum + '"]').addClass('active');
 	$('.icons .animating').removeClass('animating');
+	$('.data-wrapper').scrollTop(0);
 	
 	
 	setTimeout(() => {
@@ -108,6 +109,7 @@ function switchDesktopSlide(e: JQuery.ClickEvent) {
 		
 		$('.title-wrapper [data-slide="' + slideNum + '"]').addClass("active");
 		$('.data-wrapper [data-slide="' + slideNum + '"]').addClass("active");
+
 		
 		setTimeout(() => {
 			$('.title-wrapper [data-slide="' + slideNum + '"]').addClass(
@@ -119,6 +121,7 @@ function switchDesktopSlide(e: JQuery.ClickEvent) {
 			
 			$('.icons .st1').addClass('animating');
 			$('.icons .active .st1').removeClass("animating");
+
 		}, 20);
 	}, 200);
 }
@@ -131,27 +134,29 @@ function toggleMobileData(e: JQuery.ClickEvent) {
 	let slide = $el.data("slide");
 	let newClass = already ? "" : "active in-sight";
 	
-	$(".title-wrapper .mobile-content").slideUp("fast");
+	$(".title-wrapper .mobile-content").slideUp(0, () => {
 
-	let elTop = $el.offset()?.top;
+		let elTop = $el.offset()?.top;
+		
+		$(".title-wrapper h2").removeClass("active");
 	
-	$(".title-wrapper h2").removeClass("active");
+		$el.addClass(newClass);
+		$next.addClass(newClass);
+	
+		if (!already) {
+			$next.slideDown(0, "", () => {
+				$(".data-wrapper [data-slide]").removeClass("active");
+				$('.data-wrapper [data-slide="' + slide + '"]').addClass(newClass);
+	
+				if (elTop) $("html, body").scrollTop(elTop - 65);
+	
+				setTimeout(() => {
+					$next.addClass(newClass);
+				}, 200);
+			});
+		}
+	});
 
-	$el.addClass(newClass);
-	$next.addClass(newClass);
-
-	if (!already) {
-		$next.slideDown("fast", "", () => {
-			$(".data-wrapper [data-slide]").removeClass("active");
-			$('.data-wrapper [data-slide="' + slide + '"]').addClass(newClass);
-
-			// if (elTop) $("html, body").scrollTop(elTop - 65);
-
-			setTimeout(() => {
-				$next.addClass(newClass);
-			}, 200);
-		});
-	}
 }
 
 window.addEventListener("resize", () => {

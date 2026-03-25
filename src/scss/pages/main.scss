@@ -37,7 +37,7 @@ section {
 						flex-direction: column;
 						justify-content: space-between;
 						padding-top: calc(
-							clamp(25px, 2.5rem, 46px) * 4 + 8vmax
+							clamp(25px, 2.5vmax, 46px) * 4 + 5vmax
 						);
 						padding-bottom: 6vmax;
 
@@ -47,7 +47,7 @@ section {
 							color: v.$primary;
 							background-color: #fff;
 							font-weight: 700;
-							font-size: clamp(25px, 2.5rem, 46px);
+							font-size: clamp(25px, 2.5vmax, 46px);
 							padding: 1.5em 1.5em 1rem 1rem;
 							z-index: 1;
 						}
@@ -216,6 +216,18 @@ section {
 							opacity 0.4s,
 							transform 0.4s;
 						padding-right: 1rem;
+
+						&::-webkit-scrollbar{
+							background: rgba(black, .2);
+							width: 8px;
+							border-radius: 8px;
+							overflow: hidden;
+						}
+
+						&::-webkit-scrollbar-thumb{
+							background-color: #fff;
+							border-radius: 8px;
+						}
 
 						& [data-slide] {
 							transform: translatey(20px);
@@ -936,6 +948,7 @@ section {
 							// border-left: 2px solid #aaa;
 							transition: left 0.5s;
 							left: 0;
+							top: 80%;
 							white-space: nowrap;
 
 							&:before {
