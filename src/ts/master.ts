@@ -30,11 +30,11 @@ const historySwiperOptions: SwiperOptions = {
 	breakpoints: {
 		200: {
 			slidesPerView: 1,
-			// autoHeight: true
+			autoHeight: true
 		},
 		480: {
 			slidesPerView: 1,
-			// autoHeight: true
+			autoHeight: true
 		},
 		650: {
 			slidesPerView: 6,

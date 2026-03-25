@@ -580,10 +580,18 @@ section#map {
         padding-top: 0.7em;
         padding-bottom: 0.7em;
         border-top: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
-    section#map .title-wrapper h2:after {
-        content: "";
+    section#map .title-wrapper h2.active {
+        display: flex;
+    }
+
+    section#map .title-wrapper h2.active i {
+        transform: rotate(180deg);
     }
 
     section#map [data-slide]:not(h2) {
