@@ -1,16 +1,39 @@
-<div class="swiper-slide" style="background-image: url(@@background)">
-	<div class="container">		
-		<div class="date">@@date</div>
-		<hgroup>
-			<h1>@@header</h1>
-			<p>@@subheader</p>
-		</hgroup>
-		@@if(partners.length != 0){
-			<div class="partners">
-				@@for(i=0;i<partners.length;i++){
-					@@include('./partner-link.html', { "partner": `+JSON.stringify(partners[i])+` })
+<div class="swiper-slide">
+	@@if(background.type === 'image'){
+		<img src="@@background.url" alt="@@header">
+	}
+	@@if(background.type === 'video'){
+		<video src="@@background.url" muted playsinline loop autoplay></video>
+	}
+	<div class="slide-content">
+		<div class="container">
+			@@if(context.date){
+				<div class="date">@@date</div>
+			}
+			<hgroup>
+				<h1>@@header</h1>
+				<p>@@subheader</p>
+			</hgroup>
+			@@if(partners.length != 0){
+				<div class="partners">
+					@@for(i=0;i<partners.length;i++){
+						@@include('./partner-link.html', { "partner": `+JSON.stringify(partners[i])+` })
+					}
+				</div>
+			}
+		</div>
+		<div class="container">
+		@@if(numbers.length != 0){
+			<div class="numbers">
+				@@for(i=0; i<numbers.length; i++){
+					<div class="number">
+						<div class="number-val">` + numbers[i].number + `</div>
+						<div class="number-description">` + numbers[i].description + `</div>
+					</div>
+					<div class="divider"></div>
 				}
 			</div>
 		}
+		</div>
 	</div>
 </div>

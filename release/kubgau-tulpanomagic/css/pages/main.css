@@ -1,71 +1,127 @@
 @charset "UTF-8";
 
 section#hero {
-    height: calc(100vh - 35px - 4rem);
-}
-
-section#hero #hero-swiper {
-    height: 100%;
-}
-
-section#hero #hero-swiper .swiper-wrapper {
-    height: 100%;
-}
-
-section#hero #hero-swiper .swiper-wrapper .swiper-slide {
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
+    height: calc(100vh - 43px - 4rem);
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-section#hero #hero-swiper .swiper-wrapper .swiper-slide::before {
-    content: "";
-    display: block;
+@media (max-width: 500px) {
+    section#hero {
+        height: unset;
+    }
+}
+
+section#hero video, section#hero img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: bottom right;
+    object-position: bottom right;
+    min-height: 85vh;
+}
+
+section#hero .hero-content {
     position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode: multiply;
-}
-
-section#hero #hero-swiper .swiper-wrapper .swiper-slide .container {
+    width: 100%;
+    top: 2vw;
     z-index: 2;
-    color: #fff;
-    height: calc(100vh - 35px - 4rem);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: calc(clamp(25px, 2.5vmax, 46px) * 4 + 5vmax);
-    padding-bottom: 6vmax;
 }
 
-section#hero #hero-swiper .swiper-wrapper .swiper-slide .container .date {
-    position: absolute;
-    top: 0;
-    color: #9DD800;
+section#hero .hero-content h1 {
+    color: #0E5A67;
     background-color: #fff;
-    font-weight: 700;
-    font-size: clamp(25px, 2.5vmax, 46px);
-    padding: 1.5em 1.5em 1rem 1rem;
-    z-index: 1;
+    padding: clamp(1rem, 1vw, 2rem) clamp(2rem, 1vw, 4rem);
+    line-height: 1em;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+    border-bottom-right-radius: 0.75em;
 }
 
-section#hero #hero-swiper .swiper-wrapper .swiper-slide .container hgroup h1 {
-    max-width: 75%;
+section#hero .hero-content p {
+    width: 460px;
+    max-width: 40vw;
+    background-color: #0E5A67;
+    padding: clamp(1rem, 1vw, 2rem);
+    margin: 0;
+    font-size: clamp(16px, 1.5vw, 24px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 3rem;
+    color: #fff;
 }
 
-section#hero #hero-swiper .swiper-wrapper .swiper-slide .container .partners {
+@media (max-width: 460px) {
+    section#hero .hero-content p {
+        max-width: 80vw;
+    }
+}
+
+section#hero .numbers {
+    position: relative;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section#hero .numbers:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+section#hero .numbers .container {
     display: flex;
-    gap: 1rem;
+    padding: 2vmax 0;
+    justify-content: center;
+    position: relative;
+    gap: 2vw;
+    color: #fff;
 }
 
-section#hero #hero-swiper .swiper-wrapper .swiper-slide .container .partners img {
-    height: clamp(24px, 3.5vmax, 46px);
-    width: auto;
+section#hero .numbers .container .divider {
+    width: 1px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0));
+}
+
+section#hero .numbers .container .divider:last-of-type {
+    display: none;
+}
+
+section#hero .numbers .container .number-val {
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: bold;
+}
+
+section#hero .numbers .container .number-description {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+@media (max-width: 500px) {
+    section#hero .numbers .container {
+        flex-direction: column;
+    }
+
+    section#hero .numbers .container .number {
+        padding: 0 26px;
+    }
+}
+
+@media (max-width: 500px) {
+    section#hero .numbers {
+        position: relative;
+        bottom: unset;
+    }
 }
 
 section#today {
@@ -784,6 +840,7 @@ section#history .parallax-bg {
 
     section#history .swiper .swiper-wrapper {
         align-items: center;
+        height: 100% !important;
     }
 
     section#history .swiper .swiper-wrapper .swiper-slide {

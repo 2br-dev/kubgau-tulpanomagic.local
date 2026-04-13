@@ -1,14 +1,25 @@
 [
 	{
-		"date": "3-5 апреля",
-		"background": "./kubgau-tulpanomagic/img/tulpanomagic.webp",
-		"header": "Тюльпаномагия в ботаническом саду",
-		"subheader": "Встречайте весну в самом правильном месте!",
-		"partners": [
+		"date": "",
+		"background": {
+			"type": "image",
+			"url": "./kubgau-tulpanomagic/img/hero-static-new.webp"
+		},
+		"header": "Зелёная эволюция",
+		"subheader": "Исследуйте парк и узнавайте новое и удивительное о растениях вокруг.",
+		"partners": [],
+		"numbers": [
 			{
-				"title": "Тюльпаномагия",
-				"img": "./kubgau-tulpanomagic/img/partners/tulpanomagic.svg",
-				"link": ""
+				"number": ">200",
+				"description": "информационных панелей"
+			},
+			{
+				"number": "13",
+				"description": "оригинальных участков"
+			},
+			{
+				"number": ">400",
+				"description": "интересных фактов"
 			}
 		]
 	}

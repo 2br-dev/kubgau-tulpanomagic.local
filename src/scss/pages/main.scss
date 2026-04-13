@@ -1,75 +1,121 @@
 @use "../parts/vars" as v;
 
 section {
-	&#hero {
-		height: calc(100vh - 35px - 4rem);
+	&#hero{
+		height: calc(100vh - 43px - 4rem);
+		position: relative;
 
-		& #hero-swiper {
+		@media(max-width: 500px){
+			height: unset;
+		}
+		
+		& video, & img{
+			width: 100%;
 			height: 100%;
+			object-fit: cover;
+			object-position: bottom right;
+			min-height: 85vh;
+		}
 
-			& .swiper-wrapper {
+		& .hero-content{
+			position: absolute;
+			width: 100%;
+			top: 2vw;
+			z-index: 2;
+
+			& h1{
+				color: v.$secondary;
+				background-color: #fff;
+				padding: clamp(1rem, 1vw, 2rem) clamp(2rem, 1vw, 4rem);
+				line-height: 1em;
+				width: fit-content;
+				border-top-left-radius: .75em;
+				border-top-right-radius: .75em;
+				border-bottom-right-radius: .75em;
+			}
+
+			& p{
+				width: 460px;
+				max-width: 40vw;
+				background-color: v.$secondary;
+				padding: clamp(1rem, 1vw, 2rem);
+				margin: 0;
+				font-size: clamp(16px, 1.5vw, 24px);
+				box-shadow: 0 4px 20px rgba(black, .2);
+				border-bottom-left-radius: 3rem;
+				border-bottom-right-radius: 3rem;
+				border-top-right-radius: 3rem;
+				color: #fff;
+
+
+				@media(max-width: 460px){
+					max-width: 80vw;
+				}
+			}
+		}
+
+		& .numbers{
+
+			position: relative;
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			&:before{
+				content: '';
+				position: absolute;
+				left: 50%;
 				height: 100%;
+				width: 100vw;
+				transform: translateX(-50%);
+				background-color: #000000cc;
+				z-index: -1;
+			}
 
-				& .swiper-slide {
-					height: 100%;
-					background-size: cover;
-					background-position: center center;
-					position: relative;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-
-					&::before {
-						content: "";
-						display: block;
-						position: absolute;
-						inset: 0;
-						background-color: rgba(black, 0.3);
-						background-blend-mode: multiply;
+			& .container{
+				display: flex;
+				padding: 2vmax 0;
+				justify-content: center;
+				position: relative;
+				gap: 2vw;
+				color: #fff;
+				
+				& .divider{
+					width: 1px;
+					background-image: linear-gradient(to bottom, #ffffff00, #ffffff, #ffffff00);
+	
+					&:last-of-type{
+						display: none;
 					}
-
-					& .container {
-						z-index: 2;
-						color: #fff;
-						height: calc(100vh - 35px - 4rem);
-						box-sizing: border-box;
-						display: flex;
-						flex-direction: column;
-						justify-content: space-between;
-						padding-top: calc(
-							clamp(25px, 2.5vmax, 46px) * 4 + 5vmax
-						);
-						padding-bottom: 6vmax;
-
-						& .date {
-							position: absolute;
-							top: 0;
-							color: v.$primary;
-							background-color: #fff;
-							font-weight: 700;
-							font-size: clamp(25px, 2.5vmax, 46px);
-							padding: 1.5em 1.5em 1rem 1rem;
-							z-index: 1;
-						}
-
-						& hgroup {
-							& h1 {
-								max-width: 75%;
-							}
-						}
-
-						& .partners {
-							display: flex;
-							gap: 1rem;
-
-							& img {
-								height: clamp(24px, 3.5vmax, 46px);
-								width: auto;
-							}
-						}
+				}
+				
+				& .number{
+	
+					&-val{
+						font-size: clamp(26px, 4vw, 46px);
+						font-weight: bold;
+					}
+	
+					&-description{
+						font-size: clamp(16px, 2vw, 18px);
+					}
+				}
+	
+				@media(max-width: 500px){
+					flex-direction: column;
+					& .number{
+						padding: 0 v.$gutter-width;
 					}
 				}
 			}
+
+			@media(max-width: 500px){
+				position: relative;
+				bottom: unset;
+			}
+
 		}
 	}
 
@@ -865,6 +911,7 @@ section {
 
 				& .swiper-wrapper {
 					align-items: center;
+					height: 100% !important;
 
 					& .swiper-slide {
 						transform: translateX(-200%);
