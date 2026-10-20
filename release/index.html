@@ -54,7 +54,7 @@
 		<ul class="desktop">
 			<li>
 	<a
-		id="main-site"
+		class="main-site"
 		href="https://kubsau.ru"
 		target="_blank"
 		>На основной сайт</a
@@ -114,7 +114,7 @@
 >
 	<li>
 	<a
-		id="main-site"
+		class="main-site"
 		href="https://kubsau.ru"
 		target="_blank"
 		>На основной сайт</a
@@ -160,33 +160,53 @@
 
 		<!-- Герой -->
 		<section id="hero">
-	<img src="./kubgau-tulpanomagic/img/hero-static-new.webp" alt="">
+	<a href="https://kubsau.ru/events/news/tyulpanomagiya-v-kubanskom-gau/?ysclid=muxw5wyutd851057035 " class="hero-link" target="_blank"></a>
 	<div class="hero-content">
-		<div class="container">
-			<hgroup>
-				<h1>Зелёная эволюция</h1>
-				<p>Исследуйте парк и узнавайте новое и удивительное о растениях вокруг.</p>
-			</hgroup>
-		</div>
+		<!-- Часть со схемой -->
+		<div class="left-part">
+			<div class="mobile-content">
+				<div class="container">
+					<div class="hero-top">Цвети на полную!</div>
+<div class="logo-wrapper">
+	<div class="logo">
+		<img src="./kubgau-tulpanomagic/img/tulpanomagic.svg" alt="Логотип тюльпаномагии">
 	</div>
-	<div class="numbers">
-		<div class="container">
-			<div class="number">
-				<div class="number-val">>200</div>
-				<div class="number-description">информационных панелей</div>
+	<div class="logo-text">
+		<div class="lt-text">Тюльпано-</div>
+		<div class="lb-text">магия '27</div>
+	</div>
+</div>
+<div class="subline">
+	20 октября начинаем высадку для главного весеннего события Краснодара!
+</div>
+				</div>
 			</div>
-			<div class="divider"></div>
-			<div class="number">
-				<div class="number-val">13</div>
-				<div class="number-description">оригинальных участков</div>
-			</div>
-			<div class="divider"></div>
-			<div class="number">
-				<div class="number-val">>400</div>
-				<div class="number-description">интересных фактов</div>
+			<img src="./kubgau-tulpanomagic/img/forest-left.webp" alt="">
+		</div>
+		<div class="right-part">
+			<img src="./kubgau-tulpanomagic/img/forest-right.webp" alt="">
+		</div>
+		<!-- Часть с логотипом -->
+		<div class="container desktop-content">
+			<div class="row">
+				<div class="col m6">
+					<div class="hero-top">Цвети на полную!</div>
+<div class="logo-wrapper">
+	<div class="logo">
+		<img src="./kubgau-tulpanomagic/img/tulpanomagic.svg" alt="Логотип тюльпаномагии">
+	</div>
+	<div class="logo-text">
+		<div class="lt-text">Тюльпано-</div>
+		<div class="lb-text">магия '27</div>
+	</div>
+</div>
+<div class="subline">
+	20 октября начинаем высадку для главного весеннего события Краснодара!
+</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	
 </section>
 
 		<!-- Ботанический сад сегодня -->
@@ -1923,6 +1943,20 @@
 </section>
 
 
+		<!-- Новости -->
+		<section id="news">
+	<div class="container">
+		<div class="row">
+			<div class="col"><h2>Новости</h2></div>
+			<div class="col">
+				<div id="news-slider" class="swiper loading">
+					<div class="swiper-wrapper" id="news-container">Загрузка новостей…</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 		<!-- Партнёрство -->
 		<section id="partnership">
 	<div class="container">
@@ -1986,7 +2020,7 @@
 		<div class="parallax-bg" style="background-image: url('/kubgau-tulpanomagic/img/history-background.webp')" data-swiper-parallax="-40%"></div>
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="1"></div>
 	<div class="section">Предыстория (начало 20 века)</div>
 	<div class="content">
 		<h3>
@@ -2001,7 +2035,7 @@
 		1924
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="2"></div>
 	<div class="section">Зарождение и создание (1957–1959)</div>
 	<div class="content">
 		<h3>
@@ -2016,7 +2050,7 @@
 		1957
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="3"></div>
 	<div class="section">Концепция планировки</div>
 	<div class="content">
 		<h3>
@@ -2031,7 +2065,7 @@
 		сентябрь 1959
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="4"></div>
 	<div class="section">Становление и расцвет (1960–1980-е годы)</div>
 	<div class="content">
 		<h3>
@@ -2046,7 +2080,7 @@
 		1960-е
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="5"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2061,7 +2095,7 @@
 		1964
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="6"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2076,7 +2110,7 @@
 		1971
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="7"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2091,7 +2125,7 @@
 		1977
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="8"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2106,7 +2140,7 @@
 		1970–80
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="9"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2121,7 +2155,7 @@
 		1988
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="10"></div>
 	<div class="section">Научное развитие и вызовы (1990–2000-е годы)</div>
 	<div class="content">
 		<h3>
@@ -2136,7 +2170,7 @@
 		1990-е
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="11"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>
@@ -2151,7 +2185,7 @@
 		2007
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="12"></div>
 	<div class="section">Современная история (с 2010-х годов по настоящее время)</div>
 	<div class="content">
 		<h3>
@@ -2166,7 +2200,7 @@
 		2016
 	</div>
 </div><div class="swiper-slide">
-	<div class="dot"></div>
+	<div class="dot" data-slide="13"></div>
 	<div class="section"></div>
 	<div class="content">
 		<h3>

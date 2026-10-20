@@ -1,6 +1,10 @@
 body{
 	margin: 0;
 
+	&.animating{
+		pointer-events: none;
+	}
+
 	& img{
 		display: block;
 		max-width: 100%;

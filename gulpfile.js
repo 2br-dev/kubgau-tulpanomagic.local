@@ -17,6 +17,8 @@ const webpack = require('webpack-stream');
 //= HTML ============================================
 const include = require('gulp-file-include');
 const sync = require('browser-sync').init({
+	online: true,
+	host: '192.168.0.210',
 	server: {
 		baseDir: './release/'
 	}

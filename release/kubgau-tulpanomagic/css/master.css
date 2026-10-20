@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+body.animating {
+    pointer-events: none;
+}
+
 body img {
     display: block;
     max-width: 100%;
@@ -2710,9 +2714,10 @@ header nav ul.desktop li a {
     color: #020202;
     display: inline-block;
     line-height: 2em;
-    padding: 0 0.75em;
+    padding: 0 0.4vw;
     border-radius: 12px;
     transition: background-color 0.2s;
+    font-size: clamp(16px, 1vw, 21px);
 }
 
 header nav ul.desktop li a:hover {
@@ -2799,7 +2804,7 @@ header nav ul.mobile li a {
 }
 
 @media (min-width: 700px) {
-    #main-site {
+    .main-site {
         display: none;
     }
 }

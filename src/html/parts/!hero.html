@@ -1,29 +1,25 @@
 <section id="hero">
-	<img src="./kubgau-tulpanomagic/img/hero-static-new.webp" alt="">
+	<a href="https://kubsau.ru/events/news/tyulpanomagiya-v-kubanskom-gau/?ysclid=muxw5wyutd851057035 " class="hero-link" target="_blank"></a>
 	<div class="hero-content">
-		<div class="container">
-			<hgroup>
-				<h1>Зелёная эволюция</h1>
-				<p>Исследуйте парк и узнавайте новое и удивительное о растениях вокруг.</p>
-			</hgroup>
+		<!-- Часть со схемой -->
+		<div class="left-part">
+			<div class="mobile-content">
+				<div class="container">
+					@@include('./!hero-content.html')
+				</div>
+			</div>
+			<img src="./kubgau-tulpanomagic/img/forest-left.webp" alt="">
 		</div>
-	</div>
-	<div class="numbers">
-		<div class="container">
-			<div class="number">
-				<div class="number-val">>200</div>
-				<div class="number-description">информационных панелей</div>
-			</div>
-			<div class="divider"></div>
-			<div class="number">
-				<div class="number-val">13</div>
-				<div class="number-description">оригинальных участков</div>
-			</div>
-			<div class="divider"></div>
-			<div class="number">
-				<div class="number-val">>400</div>
-				<div class="number-description">интересных фактов</div>
+		<div class="right-part">
+			<img src="./kubgau-tulpanomagic/img/forest-right.webp" alt="">
+		</div>
+		<!-- Часть с логотипом -->
+		<div class="container desktop-content">
+			<div class="row">
+				<div class="col m6">
+					@@include('./!hero-content.html')
+				</div>
 			</div>
 		</div>
-	</div>
+	<!-- @@include('./numbers.html') -->
 </section>

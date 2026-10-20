@@ -6,7 +6,7 @@
 	"author": "2BR",
 	"license": "MIT",
 	"scripts": {
-		"start": "clear && gulp watch"
+		"start": "cls && gulp watch"
 	},
 	"devDependencies": {
 		"@types/jquery": "^4.0.0",
